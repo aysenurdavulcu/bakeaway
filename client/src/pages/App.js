@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-class App extends React.Component {
-  render() {
-    
-    return (
-      <div id= "landing">
-        <h2 id="slogan">Cakes and bakes</h2>
-        <form>
-  <label>
-    Zipcode: 
-    <input type="text" name="Zipcode"maxLength= "5"/>
-  </label>
-</form>
-      </div>
-    )
-  }
-}
+import LandingPage from "./LandingPage"
+import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
+import ResultPage from "./ResultPage";
+import Cart from "./Cart";
+import Confirmation from "./Confirmation";
 
-export default App;
+
+export default function App(){
+  return(
+    <Router>
+      <Routes>
+        <Route exact path= "/" element={<LandingPage/>} />
+        <Route exact path= "/results" element={<ResultPage/>} />
+        <Route exact path= "/cart" element={<Cart/>} />
+        <Route exact path= "/confirmation" element={<Confirmation/>} />
+      </Routes>
+    </Router>
+  )
+}

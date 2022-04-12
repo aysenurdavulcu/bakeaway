@@ -1,17 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-class ResultPage extends React.Component {
-  render() {
-    return (
-      <div id= "landing">
-        <h2 id="slogan">stuff and bakes</h2>
-  <label>
-    Zipcode: 
-    <input type="text" name="Zipcode"maxLength= "5"/>
-  </label>
-      </div>
-    )
-  }
-}
+export default function ResultPage(){
+    return(
+        <div id = "landing">
+             <h2 id="slogan">Results</h2>
+             <button> <Link to = "/cart"> Go To Cart</Link> </button>
+        </div>
 
-export default ResultPage;
+    )
+}

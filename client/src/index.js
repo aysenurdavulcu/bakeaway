@@ -1,15 +1,9 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import App from './pages/App';
 import ResultPage from './pages/ResultPage';
-const routing = (
-  <Switch>
-  <Route exact path='/' component={App} />
-  <Route path='/ResultPage' component={ResultPage} />
-  </Switch>
-);
+
 
 ReactDOM.render(
   <React.StrictMode>

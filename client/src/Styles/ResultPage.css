@@ -1,3 +1,11 @@
 #results{
-    background-color: lightblue;
+
+
+}
+body{
+    background-color: rgb(244, 204, 210);
+}
+#button{
+    padding: 600px 0 600px;
+    text-align: right;
 }

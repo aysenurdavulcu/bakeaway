@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom'
 import ResultPage from "./ResultPage";
 import Cart from "./Cart";
 import ConfirmationPage from "./ConfirmationPage";
-
+import NavBar from "../components/NavBar";
 
 export default function App(){
   return(

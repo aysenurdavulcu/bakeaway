@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Cart.css"
+import NavBar from "../components/NavBar";
 export default function Cart(){
     return(
+      <div id = "class">
+      <NavBar isLoggedIn={false} whiteBg={false} />
         <div id = "cart">
              <h2 id="slogan">Cart</h2>
              {/* <div id = "placeorder">
@@ -24,6 +27,7 @@ export default function Cart(){
       </div>
     </div>
   </div>
+</div>
 </div>
         </div>
 

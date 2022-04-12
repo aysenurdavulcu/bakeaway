@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/LandingPage.css"
+import NavBar from "../components/NavBar";
 export default function LandingPage(){
     return(
+      <div id = "class"><NavBar isLoggedIn={false} whiteBg={false} />
         <div id = "landing">
              <h2 id="slogan">Cakes and bakes</h2>
              <form>
@@ -14,6 +16,8 @@ export default function LandingPage(){
 </form>
          
         </div>
+        </div>
+        
 
     )
 }

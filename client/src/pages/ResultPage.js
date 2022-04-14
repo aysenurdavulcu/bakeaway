@@ -7,11 +7,8 @@ export default function ResultPage(){
         <div id = "class">
         <NavBar isLoggedIn={false} whiteBg={false} />
         <div id = "results">
-             <h2 id="slogan">Results</h2>
-         
-             <div id = "button">
-             <button> <Link to = "/cart"> Go To Cart</Link> </button>
-             </div>
+             <h2 id="slogan">Displaying results for: {localStorage.getItem("Zipcode")}</h2>
+
              </div>
              </div>
 

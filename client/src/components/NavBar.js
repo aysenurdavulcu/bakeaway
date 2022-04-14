@@ -1,62 +1,31 @@
-import React from 'react';
-// import '../../styles/index.css';
-import "./navstyle.css"
+import "../Styles/navstyle.css"
 import { Link } from 'react-router-dom';
-function Login(props) {
-  return (
-    <a
-      id='login'
-      href='#'
-      style={{
-        backgroundColor: props.whiteBg ? 'none' : '#eee',
-        border: '1px solid #ddd',
-      }}
-    >
-      Login
-    </a>
-  );
-}
+import Modal from "../components/Modal";
+import React, {useState } from "react";
+export default function Navbar() {
+    const [modalOpen, setModalOpen] = useState(false);
 
-function SignUp(props) {
   return (
-    <a
-      id='signup'
-      href='#'
-      style={{
-        backgroundColor: props.whiteBg ? 'none' : '#eee',
-        border: '1px solid #ddd',
-      }}
-    >
-      Sign Up
-    </a>
-  );
-}
 
-class NavBar extends React.Component {
-  render() {
-    return (
-      <div
-        id='nav'
-        style={{ backgroundColor: this.props.whiteBg ? 'white' : 'none' }}
-      >
-        <Link to='/'>
-          <h1 id='nav-logo'>Bake Away</h1>
-        </Link>
-        <div>
-          <Link id='dashboard' to='/Cart'>
-           Cart
-          </Link>
-          <Link id="dashboard" to="/ResultPage">
-          Login/signup
-        </Link> 
-   
-          <Link id="dashboard" to="/ResultPage">
-          About Us
-        </Link> 
-         </div>
+
+      <div className='navbar'>
+
+          {/* <img className='nav-img' src={BackgroundImage} alt='NYC Apartments' /> */}
+
+          <div className='nav-buttons'>
+              <div className='nav-home-btn'> <Link to='/'>BakeAway </Link></div>
+              {/* <img className='nav-logo' src={Logo} alt='Building and map pin(https://www.flaticon.com/free-icon/houses_353354#)' /> */}
+              <button
+          className="openModalBtn"
+          onClick={() => {
+            setModalOpen(true);
+          }}
+        >
+          Login/Signup
+        </button>
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+          </div>
+
       </div>
-    );
-  }
+  )
 }
-
-export default NavBar;

@@ -14,16 +14,22 @@ export default function Navbar() {
 
           <div className='nav-buttons'>
               <div className='nav-home-btn'> <Link to='/'>BakeAway </Link></div>
+              <div className='nav-cart-btn'> <Link to='/cart'>Cart </Link></div>
               {/* <img className='nav-logo' src={Logo} alt='Building and map pin(https://www.flaticon.com/free-icon/houses_353354#)' /> */}
+   {/* <div className = 'nav-login-btn'> */}
+              
               <button
           className="openModalBtn"
           onClick={() => {
             setModalOpen(true);
           }}
         >
-          Login/Signup
+          Login
         </button>
+     
+     
         {modalOpen && <Modal setOpenModal={setModalOpen} />}
+        
           </div>
 
       </div>

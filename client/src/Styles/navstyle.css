@@ -1,10 +1,5 @@
 
 .navbar {
-    /* background-color: rgb(206, 206, 206);
-    width: 100%;
-    height: 80px;
-    display: flex;
-    position: relative; */
     font-size: 30px;
     padding: 15px;
     overflow: hidden;
@@ -15,10 +10,11 @@
     align-items: center;
     text-align: center;
     z-index: 999;
+    background-color: rgb(55, 50, 49, 0.6);
+    
 }
 
 .nav-img {
-    /* opacity: 0.8; */
     position: absolute;
     left: 0;
     top: 0;
@@ -52,9 +48,21 @@
     margin: 0 auto;
     align-self: center;
 }
+.openModalBtn{
+all: unset;
+color: white;
+cursor: pointer;
+margin-left: 2%;
 
+}
+.openModalBtn:hover{
+    color:rgb(74, 9, 9);
+}
 .nav-home-btn {
     margin-left: 10%;
+}
+.nav-cart-btn{
+    margin-left: 60%;
 }
 
 .nav-login-btn {
@@ -67,7 +75,7 @@ a:link, a:visited, a:active {
 }
 
 a:hover {
-    color: #F87D68;
+    color: rgb(74, 9, 9);
     text-decoration: none;
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");

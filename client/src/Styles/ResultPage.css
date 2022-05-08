@@ -1,11 +1,38 @@
-#results{
+.resultspage{
+    width: 100vh;
+    max-width: 100vh;
+    min-height: 900px;
+}
+.results{
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -45%;
+  margin-left: 15%;
+  max-width: 1000px;
+  position: absolute;
+}
+.display{
     padding: 100px 0 600px;
+    margin-left: 5%;
+}
 
-}
-body{
-    background-color: rgb(244, 204, 210);
-}
 #button{
     padding: 600px 0 600px;
     text-align: right;
+}
+.bakedgood{
+    width: 200px;
+    height: 300px;
+    background-color: rgba(130, 109, 109, 0.6);
+    border-style: 2px solid;
+    margin-top: 5%;
+    font-size: 20px;
+    margin-left:5%;
+  
+    
+}
+.cupcake-image{
+    width: 100%;
+    height: 50%;
 }

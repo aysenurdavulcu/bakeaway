@@ -3,6 +3,8 @@ import "../Styles/Modal.css"
 import {useState} from "react";
 
 function Modal({ setOpenModal }) {
+  const [formtype, setformtype ] = useState(false);
+
   const [logindata, setLogindata] = useState({
     username: "", 
     password:""
@@ -35,6 +37,7 @@ function Modal({ setOpenModal }) {
           {/* <h1>Are You Sure You Want to Continue?</h1> */}
         </div>
         <div className="body">
+     
         <form>
           <label>
             Username:
@@ -46,8 +49,10 @@ function Modal({ setOpenModal }) {
             <input type="text" name="password" onChange={handleChange} />
           </label>
         </form>
+       
           {/* <p>The next page looks amazing. Hope you want to go there!</p> */}
         </div>
+
         <div className="footer">
           <button
             onClick={() => {
@@ -59,6 +64,9 @@ function Modal({ setOpenModal }) {
           </button>
           <button>Continue</button>
         </div>
+        <br/>
+        <p>Don't have an account? Sign up</p>
+
       </div>
     </div>
   );

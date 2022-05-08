@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {useState} from "react"
 import "../Styles/LandingPage.css"
 import NavBar from "../components/NavBar";
-
+import searchicon from "../images/searchicon.png"
 export default function LandingPage(){
     let navigate = useNavigate()
     const [zipcode, setZipcode] = useState("")
@@ -21,21 +21,25 @@ export default function LandingPage(){
 
     }
     return(
-      <div id = "class"><NavBar isLoggedIn={false} whiteBg={false} />
-        <div id = "landing">
-             <h2 id="slogan">Cakes and bakes</h2>
-            <form onSubmit={handleSubmit}>
+      <div className = "landingpage"><NavBar isLoggedIn={false} whiteBg={false} />
+        <div className = "landing">
+             <h2 className="slogan">Cakes and bakes</h2>
+            <form className = "zipcode-form" onSubmit={handleSubmit}>
               <label>
-                <input 
+                <input className="input-zipcode" 
                   type="text" 
                   placeholder="Enter Zipcode"
                   name="zipcode" 
                   value={zipcode}
                   onChange={handleChange}
                 />
+              
+                  {/* <button className="searchbutton"
+                  type="submit"><img className= "searchimage" src = {searchicon}/></button> */}
               </label>
-              <button>Search</button>
-            </form>
+              <input className = "submiticon" type = "image" src = {searchicon}></input>
+              </form>
+  
 
         </div>
         </div>

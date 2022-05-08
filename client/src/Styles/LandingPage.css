@@ -1,8 +1,45 @@
-#landing{
+.landing{
     text-align: center;
     padding: 300px 0 300px;
+    margin-top: -5%;
 
 }
+.slogan{
+    font-size: 100px;
+    margin-top:3%;
+    width: 50%;
+    margin: auto;
+    font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+    /* margin-right:10%; */
+}
+.input-zipcode{
+    width: 250%;
+    height: 50px;
+    font-size: 22px;
+    padding: 0.5%;
+    border-style: none;
+    border-radius: 20px;
+    padding-left: 25px;
+    margin-top: 18%;
+    margin-left: 40%;
+} 
+
 body{
-    background-color: rgb(244, 204, 210);
+ 
+    background-image: url("../images/backgroundimg.jpeg") ;
+}
+.zipcode-form{
+    /* background-color: yellow; */
+    display: flex;
+    margin: auto;
+    width: 700px;
+
+}
+
+.submiticon{
+    width:15%;
+    height: 10%;
+   /* background-color: pink; */
+   margin-left: 57%;
+   
 }

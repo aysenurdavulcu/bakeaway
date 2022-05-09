@@ -1,16 +1,20 @@
 import React from "react"
-import { useEffect } from "react";
 import {useState} from "react"
-import { Navigate } from "react-router";
-import Navbar from "../components/NavBar"
-import "../Styles/LoginPage.css"
+import { Link } from 'react-router-dom';
+import Navbar from "../components/NavBar.js";
+import "../Styles/LoginPage.css";
 
-export default function Login(){
+export default function SignUp(){
     const [loginData, setLoginData] = useState({
+        firstName: "", 
+        lastName: "",
         username : "",
         password : ""
     });
     const [redirect, setRedirect] = useState(false)
+
+    const google_logo = "https://p1.hiclipart.com/preview/209/923/667/google-logo-background-g-suite-google-pay-google-doodle-text-circle-line-area-png-clipart.jpg"
+    
     console.log(loginData);
     function handleChange(event){
         setLoginData(prevData =>{
@@ -25,14 +29,7 @@ export default function Login(){
     //  send loginData to backEnd
     //  await axios.post(`INSERT LINK HERE`, {loginData.username, loginData.password})
         setRedirect(true)
-		
     }
-	// useEffect(()=>{
-	// 	if(redirect){
-	// 		Navigate("/");
-	// 	}
-
-	// },[redirect])
     return(
 <div>
 			<Navbar/>
@@ -40,8 +37,26 @@ export default function Login(){
 				
 				{/* <img src={logo} className="logo"/> */}
 
-				<h1 className="login-msg">Login to your account</h1>
+				<h1 className="login-msg">Create an account</h1>
 			<form onSubmit={handleSubmit} className="login-form">
+            <label className="user-first-name">
+					<input className="login-input"
+					placeholder="First Name"
+                    type="text" 
+                    name="firstName"
+					value={loginData.firstName}
+					onChange={handleChange}
+					/>
+				</label>
+                <label className="user-last-name">
+					<input className="login-input"
+					placeholder="Last Name"
+                    type="text" 
+                    name="lastName"
+					value={loginData.lastName}
+					onChange={handleChange}
+					/>
+				</label>
 				<label className="login-username">
 					<input className="login-input"
 					placeholder="Username"
@@ -60,7 +75,7 @@ export default function Login(){
 					onChange={handleChange}
 					/>
 				</label>
-				<input type="submit" value="Login" className="login-btns login-submit-btn"/>
+				<input type="submit" value="Sign Up" className="login-btns login-submit-btn"/>
 				{/* <p className="login-OR"> or</p>
 
 				<button className="login-btns login-google-btn">
@@ -69,11 +84,11 @@ export default function Login(){
 				</button> */}
 			</form>
 			<p className="sign-up-msg"> 
-					Dont have an account? <a href="/signUp">Sign Up</a>
+					Already a member? <Link to="/login">Login</Link>
 			</p>
 			<hr className="login-footer-line"/>
 			<p className="login-footer-msg"> 
-			By continuing in you agree to BakeAway's Terms of Service, Privacy Policy
+			By continuing in you agree to Drop-In's Terms of Service and Privacy Policy
 			</p>
 			
 			</div>

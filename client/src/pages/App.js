@@ -8,7 +8,8 @@ import ConfirmationPage from "./ConfirmationPage";
 import NavBar from "../components/NavBar";
 import AboutUs from "./AboutUs";
 import Login from "./LoginPage"
-
+import SignUpPage from "./SignUpPage"
+import ItemPage from "./ItemPage"
 export default function App(){
   return(
     <Router>
@@ -18,7 +19,9 @@ export default function App(){
         <Route exact path= "/cart" element={<Cart/>} />
         <Route exact path= "/confirmation" element={<ConfirmationPage/>} />
         <Route exact path= "/About" element={<AboutUs/>} />
-        {/* <Route exact path= "/Login" element={<Login/>} /> */}
+        <Route exact path= "/Login" element={<Login/>} />
+        <Route exact path= "/SignUp" element={<SignUpPage/>} />
+        <Route exact path= "/Item" element={<ItemPage/>} />
         
       </Routes>
     </Router>

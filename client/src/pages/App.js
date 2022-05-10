@@ -10,6 +10,7 @@ import AboutUs from "./AboutUs";
 import Login from "./LoginPage"
 import SignUpPage from "./SignUpPage"
 import ItemPage from "./ItemPage"
+import CheckoutPage from "./CheckoutPage"
 export default function App(){
   return(
     <Router>
@@ -22,6 +23,7 @@ export default function App(){
         <Route exact path= "/Login" element={<Login/>} />
         <Route exact path= "/SignUp" element={<SignUpPage/>} />
         <Route exact path= "/Item" element={<ItemPage/>} />
+        <Route exact path= "/Checkout" element={<CheckoutPage/>} />
         
       </Routes>
     </Router>

@@ -2,3 +2,58 @@
   text-align: center;
   padding: 300px 0 300px;
 }
+.Thank-you-msg{
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+  width: 400px;
+ margin:auto;
+ margin-top: -15%;
+padding: 8px;
+font-size: 30px;
+font-weight: bolder;
+border-radius: 40px;
+}
+.Confirmation-msg{
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 300px;
+ margin:auto;
+ margin-top: 2%;
+padding: 5px;
+font-size: 15px;
+font-weight: bold;
+border-radius: 40px;
+
+}
+.confirmation-icon{
+  width:750px;
+  height: 600px;
+  margin-left: 20%;
+  display: flex;
+  margin-top: -5%;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+}
+.browsing-btn{
+  width: 250px;
+  font-size: 30px;
+  color:black;
+  display: flex;
+  margin-left: 40%;
+  margin-top: -5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 4px;
+  padding-left: 20px;
+  border-radius: 30px;
+  /* color: black; */
+}
+/* #browsing-btn a:link  #browsing-btn a:visited #browsing-btn a:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+} */
+.browsing-btn a:link , .browsing-btn a:visited,  .browsing-btn a:active{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.browsing-btn a:hover {
+  color: rgb(195, 179, 217);
+  text-decoration: none;
+}

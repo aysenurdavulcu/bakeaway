@@ -109,7 +109,16 @@
 	font-size: 20px;
 	margin:0 auto;
 	margin-top: 20px;
+	color:black;
 }
+.sign-up-msg a:link , .sign-up-msg a:visited,  .sign-up-msg a:active{
+	color: rgb(191, 141, 141);
+	text-decoration: none;
+  }
+  .sign-up-msg a:hover {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+  }
 .login-footer-line{
 	width:50%;
     margin:20px auto;

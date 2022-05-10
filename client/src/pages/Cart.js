@@ -42,7 +42,7 @@ export default function Cart(){
             <p>Total: $24.23</p>
           </div>
           
-          <Link to="/">
+          <Link to="/checkout">
           <input className = "cart-checkout-icon" type = "image" src = {checkoutbutton}></input>
           </Link>
           </div>

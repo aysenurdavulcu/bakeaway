@@ -1,19 +1,54 @@
 import React from "react"
 import {useState} from "react"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from "../components/NavBar.js";
 import "../Styles/LoginPage.css";
 
 export default function SignUp(){
+	let navigate = useNavigate()
     const [loginData, setLoginData] = useState({
         firstName: "", 
         lastName: "",
         username : "",
-        password : ""
+		password : "",
+		type: ""
     });
-    const [redirect, setRedirect] = useState(false)
+	const postData = async () => {
+        try {
+            const data = { ...loginData }
+            let res = await fetch("http://localhost:8080/api/allUsers", {
+                method: "POST",
 
-    const google_logo = "https://p1.hiclipart.com/preview/209/923/667/google-logo-background-g-suite-google-pay-google-doodle-text-circle-line-area-png-clipart.jpg"
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+					userID: Date.now(),
+					username: loginData.username,
+					password: loginData.password,
+					type: loginData.type,
+					firstname: loginData.firstName,
+					lastname: loginData.lastName
+                }),
+            });
+
+            let resJson = await res.json();
+            console.log(resJson)
+			
+			if(resJson.message == 'success'){
+				alert(`Welcome, ${loginData.firstName} your account was successfully created.`)
+				console.log(`Welcome, ${loginData.firstName} your account was successfully created.`)
+				navigate('/Login')
+            } else {
+				console.log(resJson.error)
+				alert("Unable to create account. Please try again.")
+			}
+			
+        } catch (err) {
+            console.log(err.message)
+		}
+		
+    }
     
     console.log(loginData);
     function handleChange(event){
@@ -25,15 +60,13 @@ export default function SignUp(){
         })
     }
     async function handleSubmit(e){
-        e.preventDefault()
-    //  send loginData to backEnd
-    //  await axios.post(`INSERT LINK HERE`, {loginData.username, loginData.password})
-        setRedirect(true)
+		e.preventDefault()
+		postData()
     }
     return(
 <div>
 			<Navbar/>
-			<div className="login-box">
+			<div className="login-box sign-up-box">
 				
 				{/* <img src={logo} className="logo"/> */}
 
@@ -75,6 +108,27 @@ export default function SignUp(){
 					onChange={handleChange}
 					/>
 				</label>
+				{/* <p>Please select ONE: </p> */}
+				<div className="login-input-radio">
+				<label className="login-input-radio-buyer">
+					Buyer
+					<input 
+                    type="radio" 
+                    name="type"
+					value="buyer"
+					onChange={handleChange}
+					/>
+				</label>
+				<label className="login-input-radio-seller">
+					Seller
+					<input
+                    type="radio" 
+                    name="type"
+					value="seller"
+					onChange={handleChange}
+					/>
+				</label>
+				</div>
 				<input type="submit" value="Sign Up" className="login-btns login-submit-btn"/>
 				{/* <p className="login-OR"> or</p>
 
@@ -84,13 +138,14 @@ export default function SignUp(){
 				</button> */}
 			</form>
 			<p className="sign-up-msg"> 
-					Already a member? <Link to="/login">Login</Link>
+				Already a member? <Link to="/login">Login</Link>
 			</p>
 			<hr className="login-footer-line"/>
 			<p className="login-footer-msg"> 
-			By continuing in you agree to Drop-In's Terms of Service and Privacy Policy
+				By continuing in you agree to BakeAway's Terms of Service, Privacy Policy
 			</p>
-			
+
+
 			</div>
 		</div>
     )

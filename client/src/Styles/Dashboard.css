@@ -1,0 +1,9 @@
+.dash-msg{
+    width: 65%;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(246, 190, 242, 0.4);
+}

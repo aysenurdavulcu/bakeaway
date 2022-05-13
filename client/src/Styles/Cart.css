@@ -4,9 +4,9 @@
   background-color: gray;
   border-style: 1px solid;
   margin:auto;
-  margin-top: 10%;
   background-color: rgba(244, 236, 235, 0.6);
-  padding-top: 50px;
+  padding-top: 30px;
+  margin-top: 1%;
 }
 .cart-item{
   width: 80%;

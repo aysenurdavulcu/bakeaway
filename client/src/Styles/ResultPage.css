@@ -1,20 +1,19 @@
 .resultspage{
-    width: 100vh;
-    max-width: 100vh;
     min-height: 900px;
 }
 .results{
   font-size: 25px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -45%;
-  margin-left: 15%;
-  max-width: 1000px;
+  width: 80%;
+  margin-left:10%;
+  margin-top: -48%;
   position: absolute;
+  /* background-color: crimson; */
 }
 .display{
-    padding: 100px 0 600px;
-    margin-left: 5%;
+    padding: 40px 0 600px;
+    margin-left: 14%;
 }
 
 #button{
@@ -28,9 +27,11 @@
     border-style: 2px solid;
     margin-top: 5%;
     font-size: 20px;
-    margin-left:5%;
-  
+    margin-left:5%;  
     
+}
+.bakedgood-text{
+    margin-left: 2%;
 }
 .cupcake-image{
     width: 100%;

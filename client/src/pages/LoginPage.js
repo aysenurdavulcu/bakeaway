@@ -1,17 +1,22 @@
 import React from "react"
 import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {useState} from "react"
 import { Navigate } from "react-router";
 import Navbar from "../components/NavBar"
 import "../Styles/LoginPage.css"
 
 export default function Login(){
+	let navigate = useNavigate()
     const [loginData, setLoginData] = useState({
         username : "",
         password : ""
-    });
-    const [redirect, setRedirect] = useState(false)
-    console.log(loginData);
+	});
+	
+	const [checkLoginData, setCheckLoginData] = useState(null)
+
+
+    //console.log(loginData);
     function handleChange(event){
         setLoginData(prevData =>{
             return{
@@ -21,21 +26,69 @@ export default function Login(){
         })
     }
     async function handleSubmit(e){
-        e.preventDefault()
-    //  send loginData to backEnd
-    //  await axios.post(`INSERT LINK HERE`, {loginData.username, loginData.password})
-        setRedirect(true)
+		e.preventDefault()
+		console.log(loginData)
+		fetchData()
+		console.log(checkLoginData[0].FirstName)
+		if(checkLoginData != null){
+			console.log(checkLoginData)
+			console.log("user exists");
+			localStorage.setItem("FirstName", checkLoginData[0].FirstName)
+			localStorage.setItem("LoginStatus", true)
+			localStorage.setItem("UserType", checkLoginData[0].Type)
+			navigate("/");
+		}else{
+			console.log("user does NOT exists");
+		};
+
 		
-    }
+	}
+	
+	const fetchData = async () => {
+        try {
+            const result = await fetch(`http://localhost:8080/api/allusers/${loginData.username}/${loginData.password}`)
+            const resultObj = await result.json()
+            const resultObjData = resultObj.data
+			setCheckLoginData(resultObjData)
+        } catch (err) {
+            console.log(err.message)
+        }
+	}
+	
+	// useEffect(()=>{
+	// 	console.log(checkLoginData)
+	// 	if(checkLoginData == []){
+	// 		if(checkLoginData[0].Username === loginData.username){
+	// 			console.log("exists")
+	// 		}else{
+	// 			console.log("not exist")
+	// 		}
+	// 	}
+
+
+	// },[checkLoginData])
+
+	
 	// useEffect(()=>{
 	// 	if(redirect){
 	// 		Navigate("/");
 	// 	}
 
 	// },[redirect])
+	
+	// function renderNavbar(){
+	// 	return(
+	// 		<Navbar/>
+	// 	)
+	// }
+	// window.onstorage = () => {
+    //     // When local storage changes...
+    //     renderNavbar();
+    // };
     return(
-<div>
+			<div>
 			<Navbar/>
+						
 			<div className="login-box">
 				
 				{/* <img src={logo} className="logo"/> */}

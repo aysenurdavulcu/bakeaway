@@ -1,12 +1,14 @@
 import React from "react";
 import {useState, useEffect} from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "../Styles/ResultPage.css"
 import NavBar from "../components/NavBar";
 import cupcakes from "../images/cupcakes.jpeg"
 
 
 export default function ResultPage(){
+
+    let navigate = useNavigate()
 
     const [goodsData, setGoodsData] = useState([])
 
@@ -20,6 +22,12 @@ export default function ResultPage(){
             console.log(err.message)
         }
     }
+    const handleClick = e => {
+       // const goodsID = e.target.getAttribute("goods-id");
+        console.log(e);
+        // console.log(goodsID);
+
+      };
 
     useEffect(() =>{
         fetchData();
@@ -34,7 +42,8 @@ export default function ResultPage(){
                 {/* {checkData} */}
                 {goodsData.map((item) =>{
                     return(
-                        <div className ="bakedgood"> 
+                        // localStorage.setItem("ItemClicked", item.Name)
+                        <div className ="bakedgood" goods-id={item.Name} onClick={handleClick}>
                             <img className = "cupcake-image" src = {cupcakes}/>
                             <p className="bakedgood-text" key={item}>
                                 {item.Name}<br/>
@@ -42,7 +51,7 @@ export default function ResultPage(){
                                 ${item.Price}/each<br/>
                                 {item.Zipcode}<br/>
                             </p>
-                        </div> 
+                        </div>
                     );
                 })}
                 

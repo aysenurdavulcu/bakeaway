@@ -34,8 +34,10 @@ export default function Login(){
 			console.log(checkLoginData)
 			console.log("user exists");
 			localStorage.setItem("FirstName", checkLoginData[0].FirstName)
+			localStorage.setItem("LastName", checkLoginData[0].LastName)
 			localStorage.setItem("LoginStatus", true)
 			localStorage.setItem("UserType", checkLoginData[0].Type)
+			localStorage.setItem("UserID", checkLoginData[0].UserID)
 			navigate("/");
 		}else{
 			console.log("user does NOT exists");

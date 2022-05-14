@@ -11,7 +11,7 @@ export default function ResultPage(){
     let navigate = useNavigate()
 
     const [goodsData, setGoodsData] = useState([])
-
+    console.log(goodsData)
     const fetchData = async () => {
         try {
             const result = await fetch(`http://localhost:8080/api/allGoods/zipcode/${localStorage.getItem("Zipcode")}`)
@@ -22,12 +22,14 @@ export default function ResultPage(){
             console.log(err.message)
         }
     }
-    const handleClick = e => {
-       // const goodsID = e.target.getAttribute("goods-id");
-        console.log(e);
-        // console.log(goodsID);
 
-      };
+    const handleClick = e =>{
+        console.log(e.target.getAttribute("itemclicked"));
+        
+        localStorage.setItem("itemclicked", (e.target.getAttribute("itemclicked")))
+      //  localStorage.setItem("ItemClicked", item.Name)
+      console.log((e.target.getAttribute("itemclicked")))
+    }
 
     useEffect(() =>{
         fetchData();
@@ -43,10 +45,10 @@ export default function ResultPage(){
                 {goodsData.map((item) =>{
                     return(
                         // localStorage.setItem("ItemClicked", item.Name)
-                        <div className ="bakedgood" goods-id={item.Name} onClick={handleClick}>
-                           <Link to =  "/item" >
-                            <img className = "cupcake-image" alt = "img"src = {foodready}/>
-                            <p className="bakedgood-text" key={item}>
+                        <div className ="bakedgood"  itemclicked={JSON.stringify(item)} onClick={handleClick}>
+                           <Link to =  "/item" itemclicked={JSON.stringify(item)}>
+                            <img className = "cupcake-image" alt = "img"src = {foodready} itemclicked={JSON.stringify(item)} />
+                            <p className="bakedgood-text" key={item} itemclicked={JSON.stringify(item)}>
                                 {item.Name}<br/>
                                 {item.Seller}.<br/>
                                 ${item.Price}/each<br/>

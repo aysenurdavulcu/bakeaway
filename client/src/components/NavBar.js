@@ -9,7 +9,7 @@ export default function Navbar() {
 
     //var loginOrOut = <div className='nav-login-btn'> <Link to='/Login'>Login</Link></div>
     function checkLoginStatus(){
-        console.log(localStorage.getItem("LoginStatus"))
+        //console.log(localStorage.getItem("LoginStatus"))
         if(localStorage.getItem("LoginStatus") == "true"){
            // alert("logged in")
             return (<div className='nav-login-btn'> <Link to='/Logout'>Logout </Link></div>)

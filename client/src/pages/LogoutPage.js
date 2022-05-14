@@ -7,6 +7,7 @@ export default function LogoutPage(){
 
     localStorage.setItem("LoginStatus", "false");
     localStorage.setItem("FirstName", "");
+    localStorage.setItem("LastName", "");
     localStorage.setItem("UserType", "")
 
     return(

@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   width: 80%;
   margin-left:10%;
-  margin-top: -48%;
+  margin-top: -43%;
   position: absolute;
   /* background-color: crimson; */
 }
@@ -36,4 +36,5 @@
 .cupcake-image{
     width: 100%;
     height: 50%;
+    opacity: 85%;
 }

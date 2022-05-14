@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import { Link, useNavigate} from "react-router-dom";
 import "../Styles/ResultPage.css"
 import NavBar from "../components/NavBar";
-import cupcakes from "../images/cupcakes.jpeg"
+import foodready from "../images/foodready.jpg"
 
 
 export default function ResultPage(){
@@ -44,13 +44,15 @@ export default function ResultPage(){
                     return(
                         // localStorage.setItem("ItemClicked", item.Name)
                         <div className ="bakedgood" goods-id={item.Name} onClick={handleClick}>
-                            <img className = "cupcake-image" src = {cupcakes}/>
+                           <Link to =  "/item" >
+                            <img className = "cupcake-image" alt = "img"src = {foodready}/>
                             <p className="bakedgood-text" key={item}>
                                 {item.Name}<br/>
                                 {item.Seller}.<br/>
                                 ${item.Price}/each<br/>
                                 {item.Zipcode}<br/>
                             </p>
+                            </Link>
                         </div>
                     );
                 })}

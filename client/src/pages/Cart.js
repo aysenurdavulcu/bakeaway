@@ -16,30 +16,30 @@ export default function Cart(){
             <p className = "cart-title-quantity">Quantity</p>
          </div>
           <div className = "cart-item">
-            <p className = "cart-item-property">Red Velvet Cupcakes</p>
-            <p className = "cart-item-property">John R.</p>
-            <p className = "cart-item-property">11229</p>
+            <p className = "cart-item-property">Choc Cupcakes</p>
+            <p className = "cart-item-property">Kate S.</p>
+            <p className = "cart-item-property">11223</p>
             <p className = "cart-item-property">$1.25/each</p>
             <p className = "cart-item-property">5</p>
           </div>
           <div className = "cart-item">
-            <p className = "cart-item-property">Red Velvet Cupcakes</p>
-            <p className = "cart-item-property">John R.</p>
-            <p className = "cart-item-property">11229</p>
-            <p className = "cart-item-property">$1.25/each</p>
-            <p className = "cart-item-property">5</p>
+            <p className = "cart-item-property">Cinnamon Buns</p>
+            <p className = "cart-item-property">Amy R.</p>
+            <p className = "cart-item-property">11223</p>
+            <p className = "cart-item-property">$2.25/each</p>
+            <p className = "cart-item-property">8</p>
           </div>
           <div className = "cart-item">
-            <p className = "cart-item-property">Red Velvet Cupcakes</p>
-            <p className = "cart-item-property">John R.</p>
+            <p className = "cart-item-property">Reeses Cups</p>
+            <p className = "cart-item-property">Sarah P.</p>
             <p className = "cart-item-property">11229</p>
-            <p className = "cart-item-property">$1.25/each</p>
-            <p className = "cart-item-property">5</p>
+            <p className = "cart-item-property">$1.75/each</p>
+            <p className = "cart-item-property">3</p>
           </div>
       </div>
       <div className = "cart-checkout">
       <div className= "cart-total">
-            <p>Total: $24.23</p>
+            <p>Total: $29.74</p>
           </div>
           
           <Link to="/checkout">

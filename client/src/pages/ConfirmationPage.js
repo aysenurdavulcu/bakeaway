@@ -6,7 +6,7 @@ import Confirmationicon from "../images/confirmationicon.png";
 export default function ConfirmationPage(){
     return(
         <div id = "class">
-         <NavBar isLoggedIn={false} whiteBg={false} />
+         <NavBar/>
    
         <div id = "confirmation">
              {/* <h2 id="slogan">Confirmation Page</h2> */}

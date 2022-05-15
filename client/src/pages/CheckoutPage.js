@@ -76,6 +76,8 @@ export default function CheckoutPage(){
         
         <div id = "Checkout-page">
          <NavBar isLoggedIn={false} whiteBg={false} />
+
+         <h1 className="checkout-msg">Payment Information</h1>
          
          <div className="shipping-billing-info">
          <div className="Shipping-info">

@@ -1,45 +1,53 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {useState, useEffect} from 'react';
 import "../Styles/Cart.css"
 import NavBar from "../components/NavBar";
 import checkoutbutton from "../images/checkoutbutton.png"
-export default function Cart(){
+import pinkArrowIcon from "../images/pinkArrowIcon.png"
+
+export default function Cart(props){
+  console.log(props)
+  console.log(props.cart)
+  var totalAmnt = 0.00;
+  const [total, setTotal] = useState(totalAmnt);
+  
+  useEffect(() => {
+    setTotal(totalAmnt)
+  }, [totalAmnt, props.cart])
     return(
       <div className = "cartPage">
-      <NavBar isLoggedIn={false} whiteBg={false} />
+      <NavBar/>
       <div className = "cart">
-        <div className = "cart-title">
-           <p className = "cart-title-product">Product</p>
-            <p className = "cart-title-seller">Seller</p>
-            <p className = "cart-title-zipcode">Zipcode</p>
-            <p className = "cart-title-price">Price</p>
-            <p className = "cart-title-quantity">Quantity</p>
-         </div>
-          <div className = "cart-item">
-            <p className = "cart-item-property">Choc Cupcakes</p>
-            <p className = "cart-item-property">Kate S.</p>
-            <p className = "cart-item-property">11223</p>
-            <p className = "cart-item-property">$1.25/each</p>
-            <p className = "cart-item-property">5</p>
-          </div>
-          <div className = "cart-item">
-            <p className = "cart-item-property">Cinnamon Buns</p>
-            <p className = "cart-item-property">Amy R.</p>
-            <p className = "cart-item-property">11223</p>
-            <p className = "cart-item-property">$2.25/each</p>
-            <p className = "cart-item-property">8</p>
-          </div>
-          <div className = "cart-item">
-            <p className = "cart-item-property">Reeses Cups</p>
-            <p className = "cart-item-property">Sarah P.</p>
-            <p className = "cart-item-property">11229</p>
-            <p className = "cart-item-property">$1.75/each</p>
-            <p className = "cart-item-property">3</p>
-          </div>
+      <Link to="/item">
+                <input className = "return-to-results-btn" type = "image" alt = "img" src = {pinkArrowIcon}></input>
+            </Link>
+        <table className = "cart-table">
+            <td className = "cart-title">Product</td>
+            <td className = "cart-title align-center">Seller</td>
+            <td className = "cart-title align-center">Zipcode</td>
+            <td className = "cart-title align-center">Price</td>
+            <td className = "cart-title align-center">Quantity</td>
+        
+        {props.cart.map((item) =>{
+                    totalAmnt += parseFloat(item.Price)*item.Quantity;
+                    
+                    return(
+                    <tr className = "cart-row">
+                      <td className = "cart-item">{item.Name}</td>
+                      <td className = "cart-item align-center">{item.Seller}</td>
+                      <td className = "cart-item align-center">{item.Zipcode}</td>
+                      <td className = "cart-item align-center">${item.Price}/each</td>
+                      <td className = "cart-item align-center">{item.Quantity}</td>
+                    </tr>
+                    
+                    );
+                })}
+      </table>
       </div>
       <div className = "cart-checkout">
       <div className= "cart-total">
-            <p>Total: $29.74</p>
+            <p>Total: ${total.toFixed(2)}</p>
           </div>
           
           <Link to="/checkout">

@@ -1,7 +1,11 @@
+.checkout-msg{
+    margin-left:14%
+}
+
 .shipping-billing-info{
     display: flex;
     margin-left: 14%;
-    margin-top: 135px;
+    margin-top: 20px;
 }
 .Shipping-info{
     /* margin-left: 80px;

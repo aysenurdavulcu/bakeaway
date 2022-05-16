@@ -11,10 +11,16 @@ export default function Cart(props){
   console.log(props.cart)
   var totalAmnt = 0.00;
   const [total, setTotal] = useState(totalAmnt);
-  
+  const myitem = JSON.parse( localStorage.getItem("itemclicked"));
   useEffect(() => {
     setTotal(totalAmnt)
   }, [totalAmnt, props.cart])
+  const deleteItem = () => {
+    console.log(myitem.GoodsID);
+    console.log(props.cart.filter((element) => element.GoodsID !== myitem.GoodsID));
+    props.setCart( props.cart.filter((element) => element.GoodsID !== myitem.GoodsID) );
+    console.log(props.cart);
+} 
     return(
       <div className = "cartPage">
       <NavBar/>
@@ -39,11 +45,15 @@ export default function Cart(props){
                       <td className = "cart-item align-center">{item.Zipcode}</td>
                       <td className = "cart-item align-center">${item.Price}/each</td>
                       <td className = "cart-item align-center">{item.Quantity}</td>
+                      <button onClick = {deleteItem}>Delete</button>
                     </tr>
+                  
                     
                     );
+                  
                 })}
       </table>
+
       </div>
       <div className = "cart-checkout">
       <div className= "cart-total">

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/ConfirmationPage.css";
 import NavBar from "../components/NavBar";
-import Confirmationicon from "../images/confirmationicon.png";
+import thankyou from "../images/thankyou.png";
 export default function ConfirmationPage(){
     return(
         <div id = "class">
@@ -14,7 +14,7 @@ export default function ConfirmationPage(){
              <p className="Confirmation-msg">Confirmation number #14223DKJ32</p>
              
           <Link to="/results">
-          <input className = "confirmation-icon" type = "image" src = {Confirmationicon}></input>
+          <input className = "confirmation-icon" alt = "cupcakeicon"type = "image" src = {thankyou}></input>
           </Link>
           <div className = "browsing-btn">
               <Link to= "/results">

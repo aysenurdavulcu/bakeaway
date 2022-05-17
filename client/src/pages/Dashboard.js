@@ -5,10 +5,41 @@ import "../Styles/Dashboard.css"
 import NewPost from "../components/NewPost"
 import foodready from "../images/foodready.jpg"
 import {useState, useEffect} from 'react'
-
+import trashcan from "../images/trashcan.png";
 export default function Dashboard(){
+    const [deleteItem, setDeleteItem] = useState()
     const [sellerGoods, setSellerGoods] = useState([])
     console.log(sellerGoods);
+
+   const handleDelete = e =>{
+        console.log(e.target.getAttribute("goodsid"));
+        localStorage.setItem("goodsid", e.target.getAttribute("goodsid"))
+       deleteData();
+        // window.location.reload(false);
+       setDeleteItem(localStorage.getItem("goodsid"));
+        
+    }
+    const deleteData = async () => {
+        try{
+            // localStorage.getItem("goodsid")
+            // console.log('deleteData id' , id)
+            let res = await fetch(`http://localhost:8080/api/removeItem/goodsid/${localStorage.getItem("goodsid")}`, {
+                method: "DELETE",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            });
+            let resJson = await res.json();
+            console.log(resJson)
+            // alert('Deleted')
+            
+        } catch (err) {
+            console.log(err.message)
+        }
+    }
+
+
+
     const fetchData = async () => {
         try {
             const result = await fetch(`http://localhost:8080/api/allgoods/sellerid/${localStorage.getItem("UserID")}`)
@@ -22,7 +53,8 @@ export default function Dashboard(){
     }
     useEffect(() =>{
         fetchData();
-    },[])
+    },[deleteItem])
+    
 
     function message(){
         if(localStorage.getItem("UserType") == "buyer"){
@@ -48,9 +80,11 @@ export default function Dashboard(){
                                {item.Seller}<br/>
                               {item.Price}/each<br/>
                                 {item.Zipcode}<br/>
+
                                
                             </p>
-                            <button className="delete-button"> Delete button</button>
+                            <input className="delete-button" goodsid = {item.GoodsID} type = 'image'  src = {trashcan} onClick = {handleDelete}/> 
+                            
                     </div>
                     
                      );

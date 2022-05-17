@@ -13,6 +13,7 @@
     margin:auto;
     height: 400px;  
     display: flex; 
+    margin-top: -8%;
 }
 .seller-item{
     width: 200px;
@@ -21,8 +22,8 @@
     border-style: 2px solid;
     margin-top: 5%;
     font-size: 20px;
-    margin-left:5%;  
-    
+    margin-left:5%; 
+   
 
 }
 .cupcake-image{
@@ -30,8 +31,24 @@
     height: 50%;
     opacity: 85%;
 }
-
 .delete-button{
-    width:80px;
-    margin: auto;
+    width: 80px;
+	height: 60px;
+    margin-left: 55%;
+    margin-top: -50px;
+    display:inline-block;
+    vertical-align: top;
 }
+
+/* .delete-button{
+    background-color:rgb(167, 37, 37);
+    color: rgb(255, 255, 255);
+	width: 80px;
+	height: 40px;
+    font-weight: bolder;
+	font-size: 15px;
+	border-radius: 20px;
+	cursor: pointer;
+	border-style: none;
+    margin-left: 30%;
+} */

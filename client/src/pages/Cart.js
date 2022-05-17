@@ -5,7 +5,7 @@ import "../Styles/Cart.css"
 import NavBar from "../components/NavBar";
 import checkoutbutton from "../images/checkoutbutton.png"
 import pinkArrowIcon from "../images/pinkArrowIcon.png"
-
+import trashcan from "../images/trashcan.png";
 export default function Cart(props){
   console.log(props)
   console.log(props.cart)
@@ -45,7 +45,8 @@ export default function Cart(props){
                       <td className = "cart-item align-center">{item.Zipcode}</td>
                       <td className = "cart-item align-center">${item.Price}/each</td>
                       <td className = "cart-item align-center">{item.Quantity}</td>
-                      <button onClick = {deleteItem}>Delete</button>
+                      {/* <button onClick = {deleteItem}>Delete</button> */}
+                      <input className="delete-button-cart" alt = "trashimg"type = 'image'  src = {trashcan} onClick = {deleteItem}/> 
                     </tr>
                   
                     

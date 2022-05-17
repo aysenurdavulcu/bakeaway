@@ -1,8 +1,8 @@
 import React from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import { Link } from "react-router-dom";
 import "../Styles/Dashboard.css"
-import NewPost from "../components/NewPost"
+import NewPost from "../components/NewPost.js"
 import foodready from "../images/foodready.jpg"
 import {useState, useEffect} from 'react'
 import trashcan from "../images/trashcan.png";

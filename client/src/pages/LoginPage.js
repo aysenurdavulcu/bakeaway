@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {useState} from "react"
 import { Navigate } from "react-router";
-import Navbar from "../components/NavBar"
+import Navbar from "../components/NavBar.js"
 import "../Styles/LoginPage.css"
 
 export default function Login(){

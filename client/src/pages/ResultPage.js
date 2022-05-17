@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from 'react'
 import { Link, useNavigate} from "react-router-dom";
 import "../Styles/ResultPage.css"
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import foodready from "../images/foodready.jpg"
 
 

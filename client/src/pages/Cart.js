@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import "../Styles/Cart.css"
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import checkoutbutton from "../images/checkoutbutton.png"
 import pinkArrowIcon from "../images/pinkArrowIcon.png"
 import trashcan from "../images/trashcan.png";

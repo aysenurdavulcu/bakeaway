@@ -1,20 +1,20 @@
 import React from "react";
 import {useState} from 'react'
 import { Link } from "react-router-dom";
-import LandingPage from "./LandingPage"
+import LandingPage from "./LandingPage.js"
 import { BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
-import ResultPage from "./ResultPage";
-import Cart from "./Cart";
-import ConfirmationPage from "./ConfirmationPage";
-import NavBar from "../components/NavBar";
-import AboutUs from "./AboutUs";
-import Login from "./LoginPage"
-import LogoutPage from "./LogoutPage"
-import SignUpPage from "./SignUpPage"
-import ItemPage from "./ItemPage"
-import CheckoutPage from "./CheckoutPage"
-import CreatePostPage from "./CreatePostPage"
-import Dashboard from "./Dashboard"
+import ResultPage from "./ResultPage.js";
+import Cart from "./Cart.js";
+import ConfirmationPage from "./ConfirmationPage.js";
+import NavBar from "../components/NavBar.js";
+import AboutUs from "./AboutUs.js";
+import Login from "./LoginPage.js"
+import LogoutPage from "./LogoutPage.js"
+import SignUpPage from "./SignUpPage.js"
+import ItemPage from "./ItemPage.js"
+import CheckoutPage from "./CheckoutPage.js"
+import CreatePostPage from "./CreatePostPage.js"
+import Dashboard from "./Dashboard.js"
 
 export default function App(){
 

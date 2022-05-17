@@ -1,7 +1,7 @@
 import "../Styles/navstyle.css"
 import { Link } from 'react-router-dom';
 import React, {useState, useEffect } from "react";
-import Login from "../pages/LoginPage";
+import Login from "../pages/LoginPage.js";
 import ProfileIcon from "../images/profileIcon.png"
 export default function Navbar() {
 

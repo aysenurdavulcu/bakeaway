@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/CreatePostPage.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import placeorderbutton from "../images/placeorderbutton.png"
 import Confirmationicon from "../images/confirmationicon.png";
 import { useState } from "react";

@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {useState} from "react"
 import "../Styles/LandingPage.css"
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import searchicon from "../images/searchicon.png"
 export default function LandingPage(){
     let navigate = useNavigate()

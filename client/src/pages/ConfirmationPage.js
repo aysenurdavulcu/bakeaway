@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/ConfirmationPage.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar.js";
 import thankyou from "../images/thankyou.png";
 export default function ConfirmationPage(){
     return(

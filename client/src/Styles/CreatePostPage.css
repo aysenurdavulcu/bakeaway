@@ -1,0 +1,71 @@
+.Create-post{
+    margin: auto;
+    font-weight: bold;
+    background-color: white;
+    font-size: 40px;
+    width:300px;
+    padding:30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-radius: 50px;
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.post-Name{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+}
+.post-SellerName{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+}
+.uploadFile-btn {
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+    font-size: 20px;
+
+  }
+input[type="file"] {
+    color:blue;
+}
+.post-image{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+}
+.post-description{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+}
+.post-Price{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+
+}
+.post-Zipcode{
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    padding:10px;
+}
+.save-post{
+    height:35px;
+    width: 70px;
+    padding:10px;
+    /* border-style: none; */
+    background-color: rgba(237, 205, 210, 0.8);
+    border-radius: 20px;
+    border-style: 5px solid;
+    border-color:rgb(184, 122, 122);
+}

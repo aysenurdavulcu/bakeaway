@@ -1,23 +1,159 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-.App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Nunito", sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+.login-box{
+	width: 390px;
+	height: 500px;
+	border: none;
+	border-radius: 70px;
+	position: relative;
+	left: 50%;
+	top: -200px;
+	transform: translate(-50%, 50%);
+	background-color: rgba(239, 161, 161, 0.7);
+	/* background-color: rgba(249, 197, 197, 0.7); */
+	
+}
+.sign-up-box{
+	top: -300px;
+	width: 400px;
+	height: 600px;
+	background-color: rgb(248, 248, 248,0.7);
+	
+}
+.logo{
+	margin-top: 10;
+	height: 80px;
+	width: 100px;
+	/* background-color: blue; */
+	margin-left: 40%;
+}
+.login-msg{
+	font-size: 30px;
+	text-align: center;
+	/* background-color: coral; */
+	padding-top: 50px;
+	margin-bottom: -5px;
+}
+.login-form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
+	
+}
+.login-input{
+	background-color: rgb(217, 217, 223);
+	width: 270px;
+	height: 50px;
+	border-radius: 20px;
+	border-style: none;
+	margin-top: 10px;
+	padding-left: 15px;
+	font-size: 18px;
+}
+.login-input-radio{
+	width: 20px;
+	height: 50px;
+	display:flex;
+	width: 200px;
+	height: 20px;
+	margin:auto;
+	margin-top: 20px;
+	/* background-color: blueviolet; */
+}
+.login-input-radio-buyer{
+	margin-left: 40px;
+}
+.login-input-radio-seller{
+	
+}
+.login-btns{
+	color: rgb(255, 255, 255);
+	width: 160px;
+	height: 45px;
+	font-size: 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	border-style: none;
+	
+}
+.login-submit-btn{
+	background-color: rgb(0, 0, 0);
+	margin-top: 25px;
+}
+.login-submit-btn:hover{
+	background-color: rgb(255, 254, 254);
+	color:rgb(201, 105, 121);
+	margin-top: 25px;
+}
+.login-fb-btn{
+	background-color: rgb(20, 96, 247);
+	margin-top: -15px;
+	width: 240px;
+	display: inline-flex;
+	text-align: left;
+	font-size: 16px;
+}
+.fb-logo{
+	height: 30px;
+	width: 50px;
+	margin-left: -10px;
+	margin-top: 5px;
+}
+.fb-text{
+	margin-top: 12px;
 }
 
-.App .openModalBtn {
-  width: 200px;
-  height: 40px;
-  border: none;
-  border-radius: 6px;
-  background-color: cornflowerblue;
-  color: white;
-  cursor: pointer;
+.login-google-btn{
+	background-color: rgb(255, 255, 255);
+	color: black;
+	margin-top: 10px;
+	width: 240px;
+	display: inline-flex;
+	text-align: left;
+	font-size: 16px;
+	border-style: solid;
 }
-body {
-  padding: 0;
-  margin: 0;
+.google-logo{
+	height: 20px;
+	width: 20px;
+	margin-top: 10px;
+	margin-left: 12px;
 }
+.google-text{
+	margin-top: 11px;
+	margin-left: 10px;
+	font-size: 18px;
+}
+.login-OR{
+	font-size: 30px;
+	margin-top: 10px;
+}
+.sign-up-msg{
+	text-align: center;
+	width: 300px;
+	font-size: 20px;
+	margin:0 auto;
+	margin-top: 20px;
+	color:black;
+}
+.sign-up-msg a:link , .sign-up-msg a:visited,  .sign-up-msg a:active{
+	color: rgb(3, 29, 161);
+	text-decoration: none;
+  }
+  .sign-up-msg a:hover {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+  }
+.login-footer-line{
+	width:50%;
+    margin:20px auto;
+}
+.login-footer-msg{
+	text-align: center;
+	width: 300px;
+	font-size: 15px;
+	margin:0 auto;
+}
+

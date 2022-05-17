@@ -1,0 +1,42 @@
+.return-to-results-btn{
+    position: absolute;
+}
+
+.item{
+    display: flex;
+    margin-left: 10%;
+    width: 60%;
+    margin:auto;
+    margin-top:10%;
+    background-color: rgb(247, 208, 235);
+    height: 100%;
+}
+.item-image{
+    width:50%;
+    height: 100%;
+}
+.item-title{
+    font-weight: 600;
+    font-size:200%;
+    font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;
+    margin: 0;
+
+}
+.item-info{
+    /* margin-left: 5%; */
+    width: 50%;
+    font-size: 20px;
+    background-color: rgb(244, 244, 244, 0.);
+    padding-left: 5%;
+    height: 100%;
+}
+.item-price{
+    color: red;
+    font-weight: 550;
+}
+.cart-button{
+    width:122px;
+    height:100px;
+    margin-left: 70%;
+    margin-top:-15%;
+}

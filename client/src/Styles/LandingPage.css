@@ -1,7 +1,7 @@
 .landing{
     text-align: center;
     padding: 300px 0 300px;
-    margin-top: -5%;
+    margin-top: -15%;
 
 }
 .slogan{
@@ -24,10 +24,9 @@
     margin-left: 40%;
 } 
 
-body{
- 
+/* body{
     background-image: url("../images/backgroundimg.jpeg") ;
-}
+} */
 .zipcode-form{
     /* background-color: yellow; */
     display: flex;

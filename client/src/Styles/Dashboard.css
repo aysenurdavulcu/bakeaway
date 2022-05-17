@@ -1,0 +1,54 @@
+.dash-msg{
+    width: 65%;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.seller-items{
+    /* background-color: pink; */
+    width: 80%;
+    margin:auto;
+    height: 400px;  
+    display: flex; 
+    margin-top: -8%;
+}
+.seller-item{
+    width: 200px;
+    height: 300px;
+    background-color: rgba(130, 109, 109, 0.6);
+    border-style: 2px solid;
+    margin-top: 5%;
+    font-size: 20px;
+    margin-left:5%; 
+   
+
+}
+.cupcake-image{
+    width: 100%;
+    height: 50%;
+    opacity: 85%;
+}
+.delete-button{
+    width: 80px;
+	height: 60px;
+    margin-left: 55%;
+    margin-top: -50px;
+    display:inline-block;
+    vertical-align: top;
+}
+
+/* .delete-button{
+    background-color:rgb(167, 37, 37);
+    color: rgb(255, 255, 255);
+	width: 80px;
+	height: 40px;
+    font-weight: bolder;
+	font-size: 15px;
+	border-radius: 20px;
+	cursor: pointer;
+	border-style: none;
+    margin-left: 30%;
+} */

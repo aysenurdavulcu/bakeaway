@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import App from './pages/App';
 import ResultPage from './pages/ResultPage';
+import "./index.css"
 
 
 ReactDOM.render(
